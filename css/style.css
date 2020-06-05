@@ -202,8 +202,9 @@ body {
 
 @media (max-width: 600px) {
   .header-primary__main {
-    letter-spacing: 1rem;
+    letter-spacing: 0.3rem;
     font-size: 5rem;
+    margin-left: -4rem;
   }
 }
 
@@ -437,6 +438,13 @@ btn:visited {
     left: 9rem;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .composition__photo--p3 {
+    top: -7.3rem;
+    left: 7rem;
   }
 }
 
@@ -870,6 +878,12 @@ btn:visited {
 @media (max-width: 900px) {
   .row .col-1-of-3:last-child .card {
     width: 44rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .row .col-1-of-3:last-child .card {
+    width: 33.2rem;
   }
 }
 

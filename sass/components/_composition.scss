@@ -45,6 +45,10 @@
         left: 9rem;
         transform: scale(1.1);
       }
+      @include respond(phone) {
+        top: -7.3rem;
+        left: 7rem;
+      }
     }
     &:hover {
       transform: scale(1.05);
