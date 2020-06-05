@@ -1,0 +1,193 @@
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 45rem;
+
+  @include respond(tab-port) {
+    height: auto;
+  }
+  &__side {
+    backface-visibility: hidden;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    color: $white;
+    font-size: 2rem;
+    height: 45rem;
+    transition: all 0.8s ease;
+    border-radius: 5rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+    &--front {
+      background-color: $white;
+    }
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right,
+          $secondary-light,
+          $secondary-dark
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right,
+          $primary-light,
+          $primary-dark
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right,
+          $tertiary-light,
+          $tertiary-dark
+        );
+      }
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+  &__picture {
+    background-size: cover;
+    background-blend-mode: screen;
+    height: 23rem;
+    clip-path: ellipse(80% 70% at 50% 30%);
+    &--1 {
+      background-image: linear-gradient(
+          to right,
+          $secondary-light,
+          $secondary-dark
+        ),
+        url(/img/involve1.jpg);
+    }
+    &--2 {
+      background-image: linear-gradient(to right, $primary-light, $primary-dark),
+        url(/img/involve2.jpg);
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right,
+          $tertiary-light,
+          $tertiary-dark
+        ),
+        url(/img/involve3.jpg);
+    }
+  }
+  &__heading {
+    font-size: 2.8rem;
+    color: $white;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: absolute;
+    top: 12rem;
+    right: 3rem;
+    &-span {
+      border-radius: 5rem;
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($secondary-light, 0.85),
+          rgba($secondary-dark, 0.85)
+        );
+      }
+      &--2 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($primary-light, 0.85),
+          rgba($primary-dark, 0.85)
+        );
+      }
+      &--3 {
+        background-image: linear-gradient(
+          to right bottom,
+          rgba($tertiary-light, 0.85),
+          rgba($tertiary-dark, 0.85)
+        );
+      }
+    }
+  }
+  &__details {
+    padding: 3rem;
+    color: $grey;
+    & ul {
+      width: 70%;
+      margin: 0 auto;
+      & li {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba($grey, 0.3);
+        }
+      }
+    }
+  }
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    width: 90%;
+  }
+  &__price {
+    &-box {
+      text-align: center;
+      color: $white;
+      margin-bottom: $gutter-vertical;
+    }
+    &-head {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+    &-value {
+      font-size: 6rem;
+      font-weight: 100;
+      margin-bottom: 5rem;
+    }
+  }
+}
+.row .col-1-of-3:last-child .card {
+  @include respond(tab-port) {
+    width: 44rem;
+  }
+}
+@include respond(tab-port) {
+  .card {
+    height: auto;
+    &__side {
+      height: auto;
+      border-radius: 5rem 5rem 0rem 0rem;
+      position: relative;
+      &--back {
+        transform: rotateY(0);
+        border-radius: 0rem 0rem 5rem 5rem;
+      }
+    }
+    &:hover .card__side--front {
+      transform: rotateY(0);
+    }
+    &__content {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 4rem;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.btn,
+btn:link,
+btn:visited {
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  font-size: $default-font-size;
+  position: relative;
+}
+.btn {
+  &--white {
+    color: $grey;
+    background-color: $white;
+    transition: all linear 0.2s;
+    &::after {
+      background-color: $white;
+    }
+  }
+  &:hover {
+    transform: translateX(-0.3rem);
+    box-shadow: 0 0.5rem 2rem rgba($black, 0.2);
+    &::after {
+      transform: scale(1.4, 1.6);
+      opacity: 0;
+    }
+  }
+  &:active {
+    outline: none;
+    transform: translateX(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($black, 0.2);
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 10rem;
+    transition: all 0.4s;
+  }
+  &--animated {
+    animation: moveInBottom 1s ease-out;
+  }
+  &--text {
+    &:link,
+    :visited {
+      color: $primary;
+      display: inline-block;
+      border-bottom: 1px solid $primary;
+      padding: 0.3rem;
+      font-size: $default-font-size;
+      transition: all 0.2s;
+    }
+    &:hover {
+      background-color: $primary;
+      color: $white;
+      box-shadow: 0 1rem 2rem rgba($black, 0.15);
+      transform: translateY(-0.2rem);
+    }
+    &:active {
+      box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+      transform: translateY(0);
+    }
+  }
+  &--blue {
+    background-color: $primary;
+    color: $white;
+    &::after {
+      background-color: $primary;
+    }
+  }
+}

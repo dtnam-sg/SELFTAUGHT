@@ -1,0 +1,112 @@
+.enroll {
+  @include respond(tab-land) {
+    background-image: radial-gradient(
+        150% 200% ellipse at -15%,
+        rgba($white, 0.8) 0% rgba($white, 0.8) 65%,
+        transparent 35%
+      ),
+      url(/img/background3.jpg);
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($white, 0.8) 0%,
+        rgba($white, 0.8) 100%
+      ),
+      url(/img/background3.jpg);
+  }
+
+  background-image: radial-gradient(
+      150% 200% ellipse at -15%,
+      rgba($white, 0.8) 50%,
+      transparent 50%
+    ),
+    url(/img/background3.jpg);
+  background-size: cover;
+  box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
+  border-radius: 5rem;
+  height: 50rem;
+  &__form {
+    padding: 6rem;
+  }
+}
+.form {
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    & .btn--blue {
+      border: none;
+    }
+  }
+  &__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    color: inherit;
+    border: none;
+    border-radius: 0.3rem;
+    border-bottom: 3px solid transparent;
+    display: block;
+    background-color: rgba($white, 0.5);
+    width: 40%;
+    transition: all 0.3s;
+    @include respond(tab-port) {
+      width: 100%;
+    }
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $primary;
+      box-shadow: 0 1rem 2rem rgba($black, 0.15);
+      &:invalid {
+        border-bottom: 3px solid $secondary-dark;
+      }
+    }
+    &::-webkit-input-placeholder {
+      color: $grey;
+    }
+  }
+  &__radio {
+    &-group {
+      display: inline-block;
+      width: 25%;
+    }
+    &-label {
+      font-size: $default-font-size;
+      cursor: pointer;
+      position: relative;
+      padding-left: 5rem;
+    }
+    &-button {
+      height: 3rem;
+      width: 3rem;
+      border: 0.5rem solid $primary;
+      border-radius: 10rem;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: -0.4rem;
+      &::after {
+        content: "";
+        display: block;
+        height: 1.2rem;
+        width: 1.2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $primary;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+    }
+    &-input {
+      display: none;
+    }
+  }
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+}
