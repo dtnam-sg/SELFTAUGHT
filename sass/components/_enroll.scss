@@ -5,7 +5,7 @@
         rgba($white, 0.8) 0% rgba($white, 0.8) 65%,
         transparent 35%
       ),
-      url(/img/background3.jpg);
+      url(/img/popup1.jpg);
   }
 
   @include respond(tab-port) {
@@ -14,7 +14,7 @@
         rgba($white, 0.8) 0%,
         rgba($white, 0.8) 100%
       ),
-      url(/img/background3.jpg);
+      url(/img/popup1.jpg);
   }
 
   background-image: radial-gradient(
@@ -22,7 +22,7 @@
       rgba($white, 0.8) 50%,
       transparent 50%
     ),
-    url(/img/background3.jpg);
+    url(/img/popup1.jpg);
   background-size: cover;
   box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
   border-radius: 5rem;

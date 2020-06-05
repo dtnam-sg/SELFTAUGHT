@@ -774,18 +774,18 @@ btn:visited {
 }
 
 .card__picture--1 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#ffb900), to(#ff7730)), url(/img/involve1.jpg);
-  background-image: linear-gradient(to right, #ffb900, #ff7730), url(/img/involve1.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffb900), to(#ff7730)), url(/img/background1.jpg);
+  background-image: linear-gradient(to right, #ffb900, #ff7730), url(/img/background1.jpg);
 }
 
 .card__picture--2 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#8e9efc), to(#1c3eff)), url(/img/involve2.jpg);
-  background-image: linear-gradient(to right, #8e9efc, #1c3eff), url(/img/involve2.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(#8e9efc), to(#1c3eff)), url(/img/background2.jpg);
+  background-image: linear-gradient(to right, #8e9efc, #1c3eff), url(/img/background2.jpg);
 }
 
 .card__picture--3 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#55c57a), to(#28b485)), url(/img/involve3.jpg);
-  background-image: linear-gradient(to right, #55c57a, #28b485), url(/img/involve3.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(#55c57a), to(#28b485)), url(/img/popup1.jpg);
+  background-image: linear-gradient(to right, #55c57a, #28b485), url(/img/popup1.jpg);
 }
 
 .card__heading {
@@ -996,7 +996,7 @@ btn:visited {
 }
 
 .enroll {
-  background-image: radial-gradient(150% 200% ellipse at -15%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(/img/background3.jpg);
+  background-image: radial-gradient(150% 200% ellipse at -15%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(/img/popup1.jpg);
   background-size: cover;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
@@ -1006,14 +1006,14 @@ btn:visited {
 
 @media (max-width: 1200px) {
   .enroll {
-    background-image: radial-gradient(150% 200% ellipse at -15%, rgba(255, 255, 255, 0.8) 0% rgba(255, 255, 255, 0.8) 65%, transparent 35%), url(/img/background3.jpg);
+    background-image: radial-gradient(150% 200% ellipse at -15%, rgba(255, 255, 255, 0.8) 0% rgba(255, 255, 255, 0.8) 65%, transparent 35%), url(/img/popup1.jpg);
   }
 }
 
 @media (max-width: 900px) {
   .enroll {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url(/img/background3.jpg);
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url(/img/background3.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url(/img/popup1.jpg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url(/img/popup1.jpg);
   }
 }
 
