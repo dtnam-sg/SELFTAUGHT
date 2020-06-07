@@ -67,11 +67,11 @@
           $secondary-light,
           $secondary-dark
         ),
-        url(/img/background1.jpg);
+        url(../img/involve1.jpg);
     }
     &--2 {
       background-image: linear-gradient(to right, $primary-light, $primary-dark),
-        url(/img/background2.jpg);
+        url(../img/involve3.jpg);
     }
     &--3 {
       background-image: linear-gradient(
@@ -79,7 +79,7 @@
           $tertiary-light,
           $tertiary-dark
         ),
-        url(/img/popup1.jpg);
+        url(../img/involve3.jpg);
     }
   }
   &__heading {
